@@ -1,0 +1,137 @@
+// variables
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600&family=Baloo+Thambi+2&display=swap');
+
+$text-default-color: #ffffff;
+$default: #57606f;
+$link-padding: 10px 12px;
+$form-background: #f1f2f6;
+$form-border: 1px solid #ccc;
+$box-border-radius: 5px;
+$box-margin-top: 20px;
+$success:#2ed573;
+$primary: #3742fa;
+
+$padding: 10px 18px;
+
+/* Globals */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+input {
+    display: block;
+}
+
+/* Page designs */
+html,
+body {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+// navbar styling
+nav.app-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $default;
+    color: $text-default-color;
+    text-transform: uppercase;
+    padding: 0 10px;
+
+    ul.nav-list {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+
+        a.nav-link {
+            color: $text-default-color;
+            padding: $link-padding;
+            display: block;
+
+            &:hover {
+                background-color: $text-default-color;
+                color: $default;
+                transition: all .5s ease;
+            }
+
+            i.link-icon {
+                font-size: 14px;
+                margin-right: 3px;
+            }
+        }
+    }
+}
+
+// Form styling
+section.login-section,
+section.register-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form#login-form,
+    form#register-form {
+        width: 40%;
+        margin: 0 auto;
+        background-color: $form-background;
+        padding: 20px;
+        border-radius: $box-border-radius;
+        margin-top: $box-margin-top;
+
+        p {
+            color: $default;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            margin: 5px 0;
+        }
+
+        a#forgot-password,
+        #login-link {
+            color: $primary;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            margin: 5px 0;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 8px 4px;
+            border: $form-border;
+            border-radius: $box-border-radius;
+            margin-bottom: 5px;
+
+        }
+
+        button {
+            background-color: $default;
+            cursor: pointer;
+            color: $text-default-color;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        button#create-account,
+        #create-account-btn {
+            background-color: $success;
+            color: $text-default-color
+        }
+    }
+}

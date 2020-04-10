@@ -1,0 +1,14 @@
+{
+	"name": "todo_app",
+	"version": "1.0.0",
+	"description": "Todo App",
+	"main": "index.php",
+	"author": "Victor <leofizzy3@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"compile:sass": "node-sass App/src/css/app.scss -o App/src/css -w"
+	},
+	"devDependencies": {
+		"node-sass": "^4.13.1"
+	}
+}
