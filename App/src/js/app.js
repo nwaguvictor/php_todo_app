@@ -6,4 +6,3 @@ function navigateForms() {
         document.querySelector('#login-form').style.display = 'none';
     })
 }
-navigateForms();

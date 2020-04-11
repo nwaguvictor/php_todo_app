@@ -14,6 +14,16 @@
     <header class="app-header">
         <nav class="app-navbar">
             <div class="app-logo">Todo App</div>
+            <!-- Login form -->
+            <form action="" method="post" id="login-form">
+                <input type="email" name="user-email" placeholder="johndoe@gmail.com" id="login-email" required>
+                <input type="password" name="user-password" placeholder="xxxxxxxx" id="login-password" minlength="3" required>
+
+                <button type="submit" name="submit" id="submit-login">
+                    <i class="fas fa-location-arrow fa-fw link-icon"></i>&nbsp;Login
+                </button>
+            </form>
+
             <ul class="nav-list">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php"><i class="fas fa-home fa-fw link-icon"></i>Home</a>
@@ -33,27 +43,6 @@
 
     <!-- Main Section and forms -->
     <main class="app-main">
-        <!-- login -->
-        <section class="login-section">
-            <form action="" method="post" id="login-form">
-                <p>Welcome! Please login</p>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="user-email" placeholder="johndoe@gmail.com" id="login-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="user-password" placeholder="xxxxxxxx" id="login-password" minlength="3" required>
-                </div>
-                <button type="submit" name="submit" id="submit-login">
-                    <i class="fas fa-location-arrow fa-fw link-icon"></i>&nbsp;Login
-                </button>
-                <a href="#" id="forgot-password">Forgot password?</a>
-                <button type="button" id="create-account-btn">Create New Account</button>
-
-            </form>
-        </section>
-
         <!-- Register -->
         <section class="register-section">
             <form action="" method="post" id="register-form">
@@ -83,9 +72,6 @@
                 </button>
 
                 <p>Already have an account?</p>
-                <a href="index.php" id="login-link">
-                    <i class="fas fa-arrow-left fa-fw link-icon"></i>&nbsp;Login here
-                </a>
 
             </form>
         </section>

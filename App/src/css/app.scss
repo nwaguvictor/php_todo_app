@@ -45,13 +45,31 @@ body {
 // navbar styling
 nav.app-navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: $default;
     color: $text-default-color;
     text-transform: uppercase;
     padding: 0 10px;
 
+    // Login form
+    form#login-form {
+        display: flex;
+
+        input,
+        button {
+            padding: 4px;
+            border: $form-border;
+            border-radius: 3px;
+            margin: 0 4px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    }
+
+    // navigation bar
     ul.nav-list {
         display: flex;
         justify-content: space-between;
@@ -77,35 +95,23 @@ nav.app-navbar {
 }
 
 // Form styling
-section.login-section,
 section.register-section {
     display: flex;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    form#login-form,
     form#register-form {
         width: 40%;
-        margin: 0 auto;
         background-color: $form-background;
         padding: 20px;
         border-radius: $box-border-radius;
-        margin-top: $box-margin-top;
 
         p {
             color: $default;
             display: flex;
             align-self: center;
-            justify-content: center;
-            margin: 5px 0;
-        }
-
-        a#forgot-password,
-        #login-link {
-            color: $primary;
-            display: flex;
-            align-items: baseline;
             justify-content: center;
             margin: 5px 0;
         }

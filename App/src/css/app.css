@@ -24,12 +24,22 @@ body {
 
 nav.app-navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #57606f;
   color: #ffffff;
   text-transform: uppercase;
   padding: 0 10px; }
+  nav.app-navbar form#login-form {
+    display: flex; }
+    nav.app-navbar form#login-form input,
+    nav.app-navbar form#login-form button {
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin: 0 4px; }
+    nav.app-navbar form#login-form button {
+      cursor: pointer; }
   nav.app-navbar ul.nav-list {
     display: flex;
     justify-content: space-between;
@@ -46,50 +56,23 @@ nav.app-navbar {
         font-size: 14px;
         margin-right: 3px; }
 
-section.login-section,
 section.register-section {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  section.login-section form#login-form,
-  section.login-section form#register-form,
-  section.register-section form#login-form,
   section.register-section form#register-form {
     width: 40%;
-    margin: 0 auto;
     background-color: #f1f2f6;
     padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px; }
-    section.login-section form#login-form p,
-    section.login-section form#register-form p,
-    section.register-section form#login-form p,
+    border-radius: 5px; }
     section.register-section form#register-form p {
       color: #57606f;
       display: flex;
       align-self: center;
       justify-content: center;
       margin: 5px 0; }
-    section.login-section form#login-form a#forgot-password,
-    section.login-section form#login-form #login-link,
-    section.login-section form#register-form a#forgot-password,
-    section.login-section form#register-form #login-link,
-    section.register-section form#login-form a#forgot-password,
-    section.register-section form#login-form #login-link,
-    section.register-section form#register-form a#forgot-password,
-    section.register-section form#register-form #login-link {
-      color: #3742fa;
-      display: flex;
-      align-items: baseline;
-      justify-content: center;
-      margin: 5px 0; }
-    section.login-section form#login-form input,
-    section.login-section form#login-form button,
-    section.login-section form#register-form input,
-    section.login-section form#register-form button,
-    section.register-section form#login-form input,
-    section.register-section form#login-form button,
     section.register-section form#register-form input,
     section.register-section form#register-form button {
       width: 100%;
@@ -97,21 +80,12 @@ section.register-section {
       border: 1px solid #ccc;
       border-radius: 5px;
       margin-bottom: 5px; }
-    section.login-section form#login-form button,
-    section.login-section form#register-form button,
-    section.register-section form#login-form button,
     section.register-section form#register-form button {
       background-color: #57606f;
       cursor: pointer;
       color: #ffffff;
       text-transform: uppercase;
       margin-top: 10px; }
-    section.login-section form#login-form button#create-account,
-    section.login-section form#login-form #create-account-btn,
-    section.login-section form#register-form button#create-account,
-    section.login-section form#register-form #create-account-btn,
-    section.register-section form#login-form button#create-account,
-    section.register-section form#login-form #create-account-btn,
     section.register-section form#register-form button#create-account,
     section.register-section form#register-form #create-account-btn {
       background-color: #2ed573;
