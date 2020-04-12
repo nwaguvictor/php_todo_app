@@ -15,7 +15,7 @@
         <nav class="app-navbar">
             <div class="app-logo">Todo App</div>
             <!-- Login form -->
-            <form action="" method="post" id="login-form">
+            <form action="App/process/login_process.php" method="post" id="login-form">
                 <input type="email" name="user-email" placeholder="johndoe@gmail.com" id="login-email" required>
                 <input type="password" name="user-password" placeholder="xxxxxxxx" id="login-password" minlength="3" required>
 
