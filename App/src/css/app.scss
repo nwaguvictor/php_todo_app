@@ -62,11 +62,23 @@ nav.app-navbar {
             border: $form-border;
             border-radius: 3px;
             margin: 0 4px;
+
+        }
+
+        input.empty,
+        .email {
+            border-color: red;
+
+            &:focus {
+                outline: unset;
+            }
         }
 
         button {
             cursor: pointer;
         }
+
+
     }
 
     // navigation bar

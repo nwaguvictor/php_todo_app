@@ -38,6 +38,12 @@ nav.app-navbar {
       border: 1px solid #ccc;
       border-radius: 3px;
       margin: 0 4px; }
+    nav.app-navbar form#login-form input.empty,
+    nav.app-navbar form#login-form .email {
+      border-color: red; }
+      nav.app-navbar form#login-form input.empty:focus,
+      nav.app-navbar form#login-form .email:focus {
+        outline: unset; }
     nav.app-navbar form#login-form button {
       cursor: pointer; }
   nav.app-navbar ul.nav-list {

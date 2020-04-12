@@ -11,13 +11,15 @@
 
 <body>
     <!-- Header section, logo and navigations -->
+
+
     <header class="app-header">
         <nav class="app-navbar">
             <div class="app-logo">Todo App</div>
             <!-- Login form -->
             <form action="App/process/login_process.php" method="post" id="login-form">
-                <input type="email" name="user-email" placeholder="johndoe@gmail.com" id="login-email" required>
-                <input type="password" name="user-password" placeholder="xxxxxxxx" id="login-password" minlength="3" required>
+                <input value="<?= isset($_GET['email']) ? $_GET['email'] : "" ?>" class="<?= isset($_GET['empty']) || isset($_GET['email']) ? "empty email" : "" ?>" type="email" name="user-email" placeholder="johndoe@gmail.com" id="login-email">
+                <input class="<?= isset($_GET['empty']) ? "empty" : "" ?>" type="password" name="user-password" placeholder="xxxxxxxx" id="login-password">
 
                 <button type="submit" name="submit" id="submit-login">
                     <i class="fas fa-location-arrow fa-fw link-icon"></i>&nbsp;Login

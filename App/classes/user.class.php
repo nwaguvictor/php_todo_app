@@ -91,4 +91,23 @@ class User extends Dbh
         $input = $this->connect()->real_escape_string($input);
         return $input;
     }
+
+    // check user before login
+    public function userLogin($_email, $_password)
+    {
+        // Sanitize email and password
+        $this->email = $this->cleanInput($_email);
+        $this->password = $this->cleanInput($_password);
+
+        $sql = "SELECT * FROM users WHERE email = '$this->email' LIMIT 1";
+        $result = $this->connect()->query($sql);
+        if ($result->num_rows >= 1) {
+            $row = $result->fetch_assoc();
+            if (password_verify($this->password, $row['password']) == $row['password']) {
+                $_SESSION['user'] = $row;
+                return true;
+            }
+        }
+        return;
+    }
 }
