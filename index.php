@@ -47,7 +47,7 @@
     <main class="app-main">
         <!-- Register -->
         <section class="register-section">
-            <form action="" method="post" id="register-form">
+            <form action="App/process/register_process" method="post" id="register-form">
                 <p>Welcome! Please Register</p>
                 <div class="form-group">
                     <label for="text">Firstname</label>
