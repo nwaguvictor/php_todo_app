@@ -110,4 +110,17 @@ class User extends Dbh
         }
         return;
     }
+
+    // Checking Email Availability Before registration
+    public function userRegistration($_fname, $_lname, $_email, $_password)
+    {
+        $this->email = $this->cleanInput($_email);
+
+        $sql = "SELECT * FROM users WHERE email = '$this->email'";
+        $query = $this->connect()->query($sql);
+        if ($query->num_rows  <= 0) {
+            $this->addUser($_fname, $_lname, $_email, $_password);
+            return true;
+        }
+    }
 }

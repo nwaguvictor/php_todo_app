@@ -47,8 +47,10 @@
     <main class="app-main">
         <!-- Register -->
         <section class="register-section">
-            <form action="App/process/register_process" method="post" id="register-form">
+            <form action="App/process/register_process.php" method="post" id="register-form">
                 <p>Welcome! Please Register</p>
+                <p style="color:red"><?= isset($_GET['user_email']) == 'taken' ? "Email Taken!. Try Another one." : "" ?></p>
+                <p style="color:green"><?= isset($_GET['user']) == 'success' ? "Acount Created Successfully. Please Login!" : "" ?></p>
                 <div class="form-group">
                     <label for="text">Firstname</label>
                     <input type="text" name="firstname" placeholder="John" id="firstname" required>
@@ -59,17 +61,17 @@
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" name="user-email" placeholder="johndoe@gmail.com" id="user-email" required>
+                    <input value="<?= isset($_GET['user_email']) ? $_GET['value'] : "" ?>" type="email" name="user-email" placeholder="johndoe@gmail.com" id="user-email" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" name="user-password" placeholder="xxxxxxxx" id="user-password" minlength="3" required>
+                    <input type="password" name="user-password" placeholder="xxxxxxxx" id="user-password" required>
                 </div>
                 <div class="form-group">
                     <label for="cpassword">Confirm Password</label>
-                    <input type="password" name="c-user-password" placeholder="xxxxxxxx" id="c-user-password" minlength="3" required>
+                    <input type="password" name="c-user-password" placeholder="xxxxxxxx" id="c-user-password" required>
                 </div>
-                <button type="submit" id="create-account">
+                <button type="submit" name="submit" id="create-account">
                     <i class="fas fa-location-arrow fa-fw link-icon"></i>&nbsp;Create New Account
                 </button>
 
