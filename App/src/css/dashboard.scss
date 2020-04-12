@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600&family=Baloo+Thambi+2&display=swap');
+// Variables
+$text-default-color: #ffffff;
+$default: #57606f;
+$link-padding: 10px 12px;
+$form-background: #f1f2f6;
+$form-border: 1px solid #ccc;
+$box-border-radius: 5px;
+$box-margin-top: 20px;
+$success:#2ed573;
+$primary: #3742fa;
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+input {
+    display: block;
+}
+
+/* Page designs */
+html,
+body {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    padding: 0 10px;
+    background-color: $default;
+    color: $text-default-color;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+
+    .nav-list {
+        display: flex;
+
+        .nav-link {
+            color: $text-default-color;
+        }
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    flex: 1 auto;
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 20%;
+        height: 100vh;
+        overflow: hidden;
+        background-color: $default;
+
+        .sidebar-heading {
+            padding: 10px;
+            font-size: 20px;
+            color: $text-default-color;
+            border-bottom: 1px solid #ccc;
+
+
+        }
+
+        .side-nav {
+            width: 100%;
+            font-size: 120%;
+
+            .nav-link {
+                color: $text-default-color;
+                display: block;
+                padding: 12px;
+                transition: all .3s ease-in;
+
+                &:hover {
+                    background-color: #fff;
+                    color: $default;
+                }
+            }
+
+        }
+    }
+
+    .content {
+        padding: 5px;
+    }
+}

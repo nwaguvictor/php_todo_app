@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600&family=Baloo+Thambi+2&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style-type: none; }
+
+input {
+  display: block; }
+
+/* Page designs */
+html,
+body {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 15px;
+  width: 100%;
+  overflow: hidden; }
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  padding: 0 10px;
+  background-color: #57606f;
+  color: #ffffff;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc; }
+  .top-navbar .nav-list {
+    display: flex; }
+    .top-navbar .nav-list .nav-link {
+      color: #ffffff; }
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  flex: 1 auto; }
+  .content-wrapper .sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #57606f; }
+    .content-wrapper .sidebar .sidebar-heading {
+      padding: 10px;
+      font-size: 20px;
+      color: #ffffff;
+      border-bottom: 1px solid #ccc; }
+    .content-wrapper .sidebar .side-nav {
+      width: 100%;
+      font-size: 120%; }
+      .content-wrapper .sidebar .side-nav .nav-link {
+        color: #ffffff;
+        display: block;
+        padding: 12px;
+        transition: all .3s ease-in; }
+        .content-wrapper .sidebar .side-nav .nav-link:hover {
+          background-color: #fff;
+          color: #57606f; }
+  .content-wrapper .content {
+    padding: 5px; }

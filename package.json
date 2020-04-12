@@ -6,7 +6,8 @@
 	"author": "Victor <leofizzy3@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"compile:sass": "node-sass App/src/css/app.scss -o App/src/css -w"
+		"compile:app.sass": "node-sass App/src/css/app.scss -o App/src/css -w",
+		"compile:dashboard.sass": "node-sass App/src/css/dashboard.scss -o App/src/css -w"
 	},
 	"devDependencies": {
 		"node-sass": "^4.13.1"

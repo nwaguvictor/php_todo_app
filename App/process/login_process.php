@@ -25,7 +25,7 @@ if (!isset($_POST['submit'])) {
         if (!$user->userLogin($email, $password)) {
             redirect("../../index.php?wrong");
         } else {
-            redirect("../../index.php");
+            redirect("../dashboard");
         }
     }
 }
