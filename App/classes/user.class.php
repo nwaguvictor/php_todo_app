@@ -83,7 +83,7 @@ class User extends Dbh
     }
 
     // helper functions
-    private function cleanInput($input)
+    protected function cleanInput($input)
     {
         $input = trim($input);
         $input = htmlspecialchars($input);
