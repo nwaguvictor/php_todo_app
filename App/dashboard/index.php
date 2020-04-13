@@ -5,17 +5,15 @@
     <nav class="top-navbar">
         <div class="app-logo"><i class="fa fa-tachometer fa-fw link-icon"></i>&nbsp;Dashboard</div>
 
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?pages=logout"><i class="fas fa-power-off fa-fw link-icon"></i>&nbsp;Logout</a>
-            </li>
-        </ul>
+        <form action="logout.php" method="post" id="logout">
+            <button type='submit' name="submit" class="logout-btn"><i class="fas fa-power-off fa-fw link-icon"></i>&nbsp;Logout</button>
+        </form>
     </nav>
 </header>
 
 <main class="content-wrapper">
     <section class="sidebar">
-        <p class="sidebar-heading">Welcome! User</p>
+        <p class="sidebar-heading">Welcome! <?= isset($_SESSION['user']) ? $_SESSION['user']['firstname'] : "User" ?></p>
         <ul class="side-nav">
             <li class="nav-item"><a class="nav-link" href="index.php"><i class="fa fa-tachometer fa-fw link-icon"></i>&nbsp;Dashboard</a></li>
             <li class="nav-item"><a class="nav-link" href="index.php?pages=todos"><i class="fas fa-list-ul fa-fw link-icon"></i>&nbsp;My Todos</a></li>
@@ -38,10 +36,6 @@
                 
                 case 'profile':
                     include_once("profile.php");
-                    break;
-                
-                case 'logout':
-                    include_once("logout.php");
                     break;
                 
                 default:
