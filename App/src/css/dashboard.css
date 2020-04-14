@@ -39,6 +39,8 @@ body {
     cursor: pointer;
     background-color: #57606f;
     text-transform: uppercase; }
+    .top-navbar .logout-btn:hover {
+      border: 1px solid red; }
 
 .content-wrapper {
   display: flex;
@@ -47,7 +49,7 @@ body {
   .content-wrapper .sidebar {
     display: flex;
     flex-direction: column;
-    flex-basis: 20%;
+    width: 15%;
     height: 100vh;
     overflow: hidden;
     background-color: #57606f; }
@@ -69,3 +71,35 @@ body {
           color: #57606f; }
   .content-wrapper .content {
     padding: 5px; }
+    .content-wrapper .content .wrapper {
+      width: 80%;
+      margin: 0 auto; }
+      .content-wrapper .content .wrapper .add-todo-btn {
+        padding: 5px 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        background-color: #3742fa;
+        text-transform: uppercase;
+        display: flex;
+        margin-bottom: 3px; }
+        .content-wrapper .content .wrapper .add-todo-btn a {
+          color: #fff; }
+      .content-wrapper .content .wrapper .display-todos {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #ece7e7;
+        align-items: center;
+        padding: 15px;
+        border-radius: 4px; }
+        .content-wrapper .content .wrapper .display-todos .todos-table {
+          border-collapse: collapse; }
+          .content-wrapper .content .wrapper .display-todos .todos-table th,
+          .content-wrapper .content .wrapper .display-todos .todos-table td {
+            border: 1px solid #ccc;
+            padding: 5px 10px; }
+          .content-wrapper .content .wrapper .display-todos .todos-table th {
+            background-color: #57606f;
+            color: #fff; }
