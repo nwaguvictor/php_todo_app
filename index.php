@@ -75,7 +75,7 @@
                     <i class="fas fa-location-arrow fa-fw link-icon"></i>&nbsp;Create New Account
                 </button>
 
-                <p>Already have an account?</p>
+                <p>Already have an account? &nbsp;<a href="">Login</a></p>
 
             </form>
         </section>

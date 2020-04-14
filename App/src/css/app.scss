@@ -39,29 +39,38 @@ body {
     font-family: "Baloo 2", sans-serif;
     font-size: 15px;
     width: 100%;
-    overflow: hidden;
 }
 
 // navbar styling
 nav.app-navbar {
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     background-color: $default;
     color: $text-default-color;
     text-transform: uppercase;
     padding: 0 10px;
+    position: relative;
 
     // Login form
     form#login-form {
         display: flex;
+
+        @media screen and (max-width: 568px) {
+            position: absolute;
+            left: 0;
+            top: 70px;
+            width: 80%;
+        }
 
         input,
         button {
             padding: 4px;
             border: $form-border;
             border-radius: 3px;
-            margin: 0 4px;
+            margin: 0 2px;
+            width: 100%;
 
         }
 
@@ -109,7 +118,8 @@ nav.app-navbar {
 // Form styling
 section.register-section {
     display: flex;
-    height: 100vh;
+    margin-top: 30px;
+    padding: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -119,6 +129,10 @@ section.register-section {
         background-color: $form-background;
         padding: 20px;
         border-radius: $box-border-radius;
+
+        @media screen and (max-width: 568px) {
+            width: 100%;
+        }
 
         p {
             color: $default;
