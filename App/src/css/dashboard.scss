@@ -192,5 +192,37 @@ body {
             }
         }
 
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                background-color: #f8f8f8;
+                width: 30%;
+                margin: 10px;
+                border-radius: 6px;
+
+                .card-body {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 0;
+
+                    i.card-icon,
+                    h3 {
+                        font-size: 200%;
+                    }
+                }
+
+                .card-footer a {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
     }
 }

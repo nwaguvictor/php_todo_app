@@ -1,5 +1,8 @@
 <?php $title = "Todo App | Dashboard"; ?>
 <?php include_once("../includes/header.php"); ?>
+<?php include_once("../classes/todo.class.php");
+$todo = new Todo();
+?>
 
 <header class="header">
     <nav class="top-navbar">
@@ -42,9 +45,26 @@
                     include_once("index.php");
                     break;
             }
-        } else {
-            include_once("index.php");
-        }
+        } else { ?>
+            <p>Your activity Chart</p>
+            <div class="dashboard">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa fa-tasks fa-fw card-icon"></i>
+                        <h3>Total: <?= $todo->todoCount($_SESSION['user']['id']); ?></h3>
+                    </div>
+                    <hr style="margin: 5px 0">
+                    <div class="card-footer">
+                        <a href="index.php?pages=todos"><span>View Todos</span> <i class="fa fa-arrow-right fa-fw footer-icon"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+
+
+        <?php }
 
 
         ?>

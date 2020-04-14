@@ -72,4 +72,15 @@ class Todo extends User
         }
         return true;
     }
+
+    public function todoCount($id)
+    {
+        $sql = "SELECT * FROM todos WHERE user_id = '$id'";
+        $query = $this->connect()->query($sql);
+        if ($query->num_rows > 0) {
+            return $query->num_rows;
+        } else {
+            return 0;
+        }
+    }
 }

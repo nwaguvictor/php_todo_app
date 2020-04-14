@@ -132,3 +132,25 @@ body {
           color: #ffffff;
           text-transform: uppercase;
           float: right; }
+    .content-wrapper .content .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start; }
+      .content-wrapper .content .dashboard .card {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: #f8f8f8;
+        width: 30%;
+        margin: 10px;
+        border-radius: 6px; }
+        .content-wrapper .content .dashboard .card .card-body {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px 0; }
+          .content-wrapper .content .dashboard .card .card-body i.card-icon,
+          .content-wrapper .content .dashboard .card .card-body h3 {
+            font-size: 200%; }
+        .content-wrapper .content .dashboard .card .card-footer a {
+          display: flex;
+          justify-content: space-between; }
