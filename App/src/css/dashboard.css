@@ -70,7 +70,9 @@ body {
           background-color: #fff;
           color: #57606f; }
   .content-wrapper .content {
-    padding: 5px; }
+    padding: 5px;
+    margin: 0 auto;
+    width: 100%; }
     .content-wrapper .content .wrapper {
       width: 80%;
       margin: 0 auto; }
@@ -103,3 +105,30 @@ body {
           .content-wrapper .content .wrapper .display-todos .todos-table th {
             background-color: #57606f;
             color: #fff; }
+    .content-wrapper .content .add-todo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 50vh; }
+      .content-wrapper .content .add-todo #add-todo-form {
+        width: 50%;
+        padding: 15px;
+        background-color: #f7f7f7;
+        border-radius: 5px; }
+        .content-wrapper .content .add-todo #add-todo-form input,
+        .content-wrapper .content .add-todo #add-todo-form textarea {
+          width: 100%;
+          padding: 8px 4px;
+          border-radius: 5px;
+          margin-bottom: 3px;
+          border: 1px solid #ccc; }
+        .content-wrapper .content .add-todo #add-todo-form #todo-submit-btn {
+          padding: 6px 8px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          cursor: pointer;
+          background-color: #3742fa;
+          color: #ffffff;
+          text-transform: uppercase;
+          float: right; }

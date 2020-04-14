@@ -12,7 +12,7 @@
             <label for="date">Date</label>
             <input type="date" name="date" id="date" required>
         </div>
-        <button type="submit" name="submit" id="todo-submit-btn">
+        <button type="submit" name="submit-todo" id="todo-submit-btn">
             <i class="fas fa-location-arrow fa-fw link-icon"></i>&nbsp;Submit
         </button>
 
