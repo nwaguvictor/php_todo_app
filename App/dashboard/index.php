@@ -22,22 +22,22 @@
         </ul>
     </section>
     <section class="content">
-        <?php 
+        <?php
         if (isset($_GET['pages'])) {
             $pages = $_GET['pages'];
             switch ($pages) {
                 case 'todos':
                     include_once("todos.php");
                     break;
-                
-                case 'todo':
-                    include_once("todo.php");
+
+                case 'add_todo':
+                    include_once("add_todo.php");
                     break;
-                
+
                 case 'profile':
                     include_once("profile.php");
                     break;
-                
+
                 default:
                     include_once("index.php");
                     break;
@@ -45,7 +45,7 @@
         } else {
             include_once("index.php");
         }
-            
+
 
         ?>
 
@@ -53,4 +53,4 @@
 </main>
 
 
-<?php include_once("../includes/footer.php");?>
+<?php include_once("../includes/footer.php"); ?>

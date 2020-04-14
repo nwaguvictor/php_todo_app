@@ -36,5 +36,3 @@
         </table>
     </section>
 </div>
-
-<!-- Add Todos -->
