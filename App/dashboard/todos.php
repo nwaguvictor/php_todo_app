@@ -26,7 +26,7 @@
                             <td><?= $todo['todo_title'] ?></td>
                             <td><?= $todo['todo'] ?></td>
                             <td><?= $todo['todo_date'] ?></td>
-                            <td><a href="index.php?pages=todos&todo=<?= $todo['todo_id'] ?>">Delete</a></td>
+                            <td><a href="index.php?pages=todos&todo_id=<?= $todo['todo_id'] ?>">Delete</a></td>
                         </tr>
                 <?php $cnt++;
                     }
@@ -36,3 +36,19 @@
         </table>
     </section>
 </div>
+
+<?php
+include_once("../classes/todo.class.php");
+$user_id = $_SESSION['user']['id'];
+$todo = new Todo();
+
+
+// Deleting todo
+
+if (isset($_GET['todo_id'])) {
+    $todo_id = $_GET['todo_id'];
+    $todo->deleteTodo($user_id, $todo_id);
+    header("Location: ../dashboard/index.php?pages=todos");
+    exit;
+}
+?>

@@ -91,13 +91,13 @@ body {
       .content-wrapper .content .wrapper .display-todos {
         display: flex;
         justify-content: center;
-        flex-direction: column;
         background-color: #ece7e7;
         align-items: center;
         padding: 15px;
         border-radius: 4px; }
         .content-wrapper .content .wrapper .display-todos .todos-table {
-          border-collapse: collapse; }
+          border-collapse: collapse;
+          width: 100%; }
           .content-wrapper .content .wrapper .display-todos .todos-table th,
           .content-wrapper .content .wrapper .display-todos .todos-table td {
             border: 1px solid #ccc;
